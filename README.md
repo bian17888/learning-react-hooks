@@ -1,6 +1,8 @@
 # learning-react-hooks
 learning-react-hooks
 
-## xx
+## Start 
 
-tnpm run dev
+    cd code
+    npm install
+    npm run dev   // http://localhost:3000/
