@@ -8,6 +8,9 @@ const ImageToogleOnScroll = ({primaryImg, secondaryImg})=>{
     
     useEffect(()=>{
         window.addEventListener('scroll', scrollHander);
+        return (()=>{
+            window.removeEventListener('scroll', scrollHander);
+        })
     });
 
     return (
@@ -20,7 +23,7 @@ const ImageToogleOnScroll = ({primaryImg, secondaryImg})=>{
     //////////////////////////////////////////////////
     
     function scrollHander(){
-        const isInView = imageRef.current.getBoundingClientRect().bottom <= window.innerHeight;
+        const isInView = imageRef.current.getBoundingClientRect()   .bottom <= window.innerHeight;
         setInView(isInView);
     }
 
